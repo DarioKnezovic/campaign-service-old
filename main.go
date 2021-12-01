@@ -9,6 +9,7 @@ import (
 func main() {
 	r := routers.SetupRouter()
 
+
 	log.Println("Server is running!")
 	r.Run(":4000")
 }

@@ -1,15 +1,14 @@
 package main
 
 import (
-	"github.com/gorilla/mux"
 	"log"
-	"net/http"
+
+	"github.com/DarioKnezovic/campaign-service/routers"
 )
 
 func main() {
-	router := mux.NewRouter()
-	router.HandleFunc("/", testHome)
+	r := routers.SetupRouter()
 
 	log.Println("Server is running!")
-	http.ListenAndServe(":4000", router)
+	r.Run(":4000")
 }

@@ -1,13 +1,12 @@
 package controllers
 
 import (
-	"encoding/json"
-	"net/http"
+	"github.com/gin-gonic/gin"
 )
 
-func testHome(rw http.ResponseWriter, r *http.Request)  {
-	response := map[string]string{
-		"message": "Hello you jebem ti krmka",
-	}
-	json.NewEncoder(rw).Encode(response)
+func TestHome(c *gin.Context)  {
+
+	c.JSON(200, gin.H{
+		"message": "Hello you",
+	})
 }

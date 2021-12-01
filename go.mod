@@ -1,5 +1,5 @@
-module campaign-service
+module github.com/DarioKnezovic/campaign-service
 
 go 1.15
 
-require github.com/gorilla/mux v1.8.0 // indirect
+require github.com/gin-gonic/gin v1.7.7 // indirect
